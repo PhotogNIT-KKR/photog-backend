@@ -26,5 +26,18 @@ router.get('/genrePictures', async (req, res) => {
         res.status(400).json("genrePictures not found");
 })
 
+// Image insertion ---- work to be done
+
+router.post('/admin/addPictures', async (req, res)=>{
+    let body = {...req.body};
+    await Gallery.insertMany(body, (err, insertPicture) => {
+        if(!err){
+            res.status(200).json("Picture insert successful");
+        }
+        else{
+            res.status(400).json("insertPicture failed");
+        }
+    });
+});
 
 module.exports = router;

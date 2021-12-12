@@ -13,4 +13,20 @@ router.get('/', async (req, res) => {
     }
 })
 
+// adding new video
+
+router.post('/admin/addVideo', async (req, res)=>{
+    let body = {...req.body};
+    await Video.insertMany(body, (err, insertVideo) => {
+        if(!err){
+            res.status(200).json("Video insert successful");
+        }
+        else{
+            res.status(400).json("insertVideo failed");
+        }
+    });
+});
+
+
+
 module.exports = router;

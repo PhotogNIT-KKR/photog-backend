@@ -1,9 +1,9 @@
 // POST:
-// app.post('/admin/event', addEvent);
-// app.post('/admin/video', addVideo);
-// app.post('/admin/gallery', addPictures);
-// app.post('/admin/designing', addDesigns);
-// app.post('/admin/team', addTeamMember);
+// app.post('/admin/event', addEvent); //
+// app.post('/admin/video', addVideo); //
+// app.post('/admin/gallery', addPictures); //
+// app.post('/admin/designing', addDesigns); //
+// app.post('/admin/team', addTeamMember); //
 // app.post('/query', postQuery); => Add Captcha
 
 

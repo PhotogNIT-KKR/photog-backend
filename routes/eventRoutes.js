@@ -21,4 +21,16 @@ router.get('/description', async (req, res)=>{
 
 // take event data from form and create new document
 
+router.post('/admin/create', async (req, res)=>{
+    let body = {...req.body};
+    await Events.insertMany(body, (err, insertEvent)=>{
+        if(!err){
+            res.status(200).json("Event insert successful");
+        }
+        else{
+            res.status(400).json("insertEvent failed");
+        }
+    });
+});
+
 module.exports = router;
